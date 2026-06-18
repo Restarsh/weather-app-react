@@ -2,9 +2,6 @@ import './App.css';
 import React, { useEffect, useState } from "react";
 import Weather from './components/Weather';
 export default function App() {
-
-  const [lat, setLat] = useState(null);
-  const [long, setLong] = useState(null);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,8 +15,6 @@ export default function App() {
         });
 
         const { latitude, longitude } = position.coords;
-        setLat(latitude);
-        setLong(longitude);
 
         // Fetch weather data
         const response = await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${latitude}&lon=${longitude}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`);
