@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.weather-card {
+  width: 400px;
+  margin: 50px auto;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header h2 { margin: 0; font-size: 24px; }
+
+.refresh-btn {
+  background: white;
+  color: #0072ff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.details { padding: 20px; text-align: center; }
+.date { font-size: 16px; opacity: 0.9; margin-bottom: 5px; }
+.description { font-size: 22px; font-weight: 600; text-transform: capitalize; margin: 0; }
+
+.metrics {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.metric-box { text-align: center; }
+.label { display: block; font-size: 14px; opacity: 0.8; }
+.value { display: block; font-size: 24px; font-weight: bold; margin-top: 5px; }
+
+.sun-times {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.1);
 }
